@@ -3,45 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>Echoes of the Quill - A Poetic Sanctuary</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
-            --text: #333333;
+            --primary: #4a3f35; /* Deep, earthy brown */
+            --secondary: #8d7b68; /* Soft, aged paper */
+            --accent: #a47551; /* Warm, golden ink */
+            --light: #f5f2ed; /* Light cream background */
+            --dark: #312921; /* Darkest brown for text */
+            --text: #5c5248; /* Main text color */
             --white: #ffffff;
         }
 
         body {
             background-color: var(--light);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.8;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary);
         }
 
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
+            background: var(--light);
+            color: var(--primary);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
         }
 
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -55,12 +65,14 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
+            font-family: 'Playfair Display', serif;
         }
 
         .logo i {
-            font-size: 2rem;
+            font-size: 1.8rem;
+            color: var(--accent);
         }
 
         nav ul {
@@ -69,14 +81,15 @@
         }
 
         nav ul li {
-            margin-left: 2rem;
+            margin-left: 2.5rem;
         }
 
         nav ul li a {
-            color: var(--white);
+            color: var(--primary);
             text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
             padding: 0.5rem 0;
             position: relative;
         }
@@ -89,11 +102,12 @@
             content: '';
             position: absolute;
             bottom: 0;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 0;
-            height: 2px;
+            height: 1px;
             background-color: var(--accent);
-            transition: width 0.3s ease;
+            transition: width 0.4s ease;
         }
 
         nav ul li a:hover::after {
@@ -101,14 +115,14 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(245, 242, 237, 0.8), rgba(245, 242, 237, 0.9)), url('https://images.unsplash.com/photo-1519666336592-e225a99dcd2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 85vh;
             display: flex;
             align-items: center;
             text-align: center;
-            color: var(--white);
+            color: var(--dark);
         }
 
         .hero-content {
@@ -117,203 +131,148 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 2rem;
+            font-style: italic;
         }
 
         .btn {
             display: inline-block;
             background-color: var(--accent);
             color: var(--white);
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
+            padding: 0.9rem 2.5rem;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            border: none;
+            border: 1px solid var(--accent);
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
             background-color: var(--primary);
+            border-color: var(--primary);
             transform: translateY(-3px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         }
 
         section {
-            padding: 5rem 0;
+            padding: 6rem 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
             position: relative;
             display: inline-block;
         }
 
         .section-title h2::after {
-            content: '';
+            content: '✒';
+            font-family: 'Times New Roman', Times, serif;
             position: absolute;
-            bottom: -10px;
+            bottom: -25px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent);
-            border-radius: 2px;
+            color: var(--accent);
+            font-size: 1.5rem;
         }
 
         .section-title p {
-            color: var(--text);
+            font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto;
+            font-style: italic;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-img {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .stat-item {
+        .poem-showcase {
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 3rem 2rem;
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .stat-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
+        .poem-showcase h3 {
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
+        
+        .poem-showcase .author {
+            font-style: italic;
+            color: var(--secondary);
+            margin-bottom: 2rem;
         }
 
-        .stat-item p {
-            color: var(--text);
+        .poem-showcase p {
+            font-size: 1.2rem;
+            line-height: 2;
+            white-space: pre-line;
+            margin-bottom: 1.5rem;
         }
-
-        .initiatives {
+        
+        .stanzas {
             background-color: var(--white);
         }
-
-        .initiatives-grid {
+        
+        .stanzas-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
-        .initiative-card {
-            background-color: var(--light);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+        .stanza-card {
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            background: var(--light);
+            transition: all 0.3s ease;
         }
 
-        .initiative-card:hover {
+        .stanza-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: var(--accent);
         }
 
-        .initiative-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .initiative-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .initiative-card:hover .initiative-img img {
-            transform: scale(1.1);
-        }
-
-        .initiative-content {
-            padding: 1.5rem;
-        }
-
-        .initiative-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .initiative-content p {
+        .stanza-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
             margin-bottom: 1.5rem;
         }
 
+        .stanza-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
         .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background-color: var(--secondary);
             color: var(--white);
             text-align: center;
-            padding: 5rem 0;
+            padding: 6rem 0;
         }
-
+        
         .cta h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1.5rem;
+            color: var(--white);
         }
 
         .cta p {
@@ -328,94 +287,90 @@
             background-color: var(--white);
             color: var(--primary);
         }
-
+        
         .cta .btn:hover {
             background-color: var(--accent);
             color: var(--white);
+            border-color: var(--accent);
         }
 
         footer {
             background-color: var(--dark);
-            color: var(--white);
-            padding: 3rem 0 1rem;
+            color: var(--light);
+            padding: 4rem 0 2rem;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
         .footer-column h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent);
+            color: var(--white);
         }
 
         .footer-column p {
             margin-bottom: 1rem;
+            color: var(--secondary);
         }
-
+        
         .footer-links {
             list-style: none;
         }
 
         .footer-links li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
         }
 
         .footer-links li a {
-            color: var(--light);
+            color: var(--secondary);
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .footer-links li a:hover {
             color: var(--accent);
-            padding-left: 5px;
+            padding-left: 8px;
         }
-
-        .social-links {
+        
+        .subscribe-form {
             display: flex;
-            gap: 1rem;
+            margin-top: 1rem;
         }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+        
+        .subscribe-form input {
+            flex-grow: 1;
+            padding: 0.8rem;
+            border: 1px solid var(--secondary);
+            background: var(--primary);
+            color: var(--light);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .subscribe-form button {
+            padding: 0.8rem 1rem;
+            background: var(--accent);
+            border: none;
             color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
+            cursor: pointer;
+            transition: background 0.3s ease;
         }
-
-        .social-links a:hover {
-            background-color: var(--accent);
-            transform: translateY(-5px);
+        
+        .subscribe-form button:hover {
+            background: var(--primary);
         }
 
         .copyright {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--primary);
+            color: var(--secondary);
         }
-
+        
         .mobile-menu {
             display: none;
             font-size: 1.5rem;
@@ -423,74 +378,43 @@
         }
 
         @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .initiatives-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .stats {
+            .stanzas-grid, .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
-            
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
-            
             nav ul {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--primary);
+                background-color: var(--light);
                 flex-direction: column;
                 padding: 1rem 0;
                 text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
             }
-            
             nav ul.active {
                 display: flex;
             }
-            
             nav ul li {
                 margin: 0;
-                padding: 0.8rem 0;
+                padding: 1rem 0;
             }
-            
             .mobile-menu {
                 display: block;
             }
-            
-            .initiatives-grid {
+            .stanzas-grid, .footer-content {
                 grid-template-columns: 1fr;
             }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation for stats counter */
-        .counter {
-            transition: all 0.5s ease;
         }
     </style>
 </head>
@@ -499,19 +423,18 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-feather-alt"></i>
+                <span>Echoes of the Quill</span>
             </div>
             <nav>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">Sanctuary</a></li>
+                    <li><a href="#the-poem">The Poem</a></li>
+                    <li><a href="#themes">Themes</a></li>
+                    <li><a href="#whispers">Whispers</a></li>
                 </ul>
             </nav>
         </div>
@@ -520,150 +443,111 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>Where Words Breathe and Silence Sings</h1>
+            <p>A sanctuary for the whispered thoughts and silent verses that echo in the corridors of the soul.</p>
+            <a href="#the-poem" class="btn">Read the Verse</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- The Poem Section -->
+    <section id="the-poem">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>The Inkwood Heart</h2>
+                <p>A verse carved from stillness, for the listening heart.</p>
             </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
-                </div>
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
-                </div>
+            <div class="poem-showcase">
+                <h3>Ode to the Fading Light</h3>
+                <p class="author">by A. Willowscribe</p>
+                <p>
+                    The sun, a poet, dips its golden quill,
+                    To write its final line upon the hill.
+                    The ink of twilight, purple, soft, and deep,
+                    Awakens stars from their celestial sleep.
+
+                    A lonely oak, a silhouette so stark,
+                    Reads the last stanza of the fading park.
+                    And in the hush, a whispered, gentle breeze,
+                    Carries the silent stories of the trees.
+                </p>
+                <a href="#" class="btn">Explore the Collection</a>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <!-- Themes Section -->
+    <section class="stanzas" id="themes">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>Themes in Verse</h2>
+                <p>Journey through the timeless landscapes of poetic thought.</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+            <div class="stanzas-grid">
+                <div class="stanza-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Nature's Sonnet</h3>
+                    <p>Exploring the rhythmic beauty of the wild, from the silent growth of a seed to the roar of the ocean tide.</p>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+                <div class="stanza-card">
+                    <i class="fas fa-hourglass-half"></i>
+                    <h3>Echoes of Time</h3>
+                    <p>Verses that capture fleeting moments, the weight of memory, and the gentle passage of the seasons of life.</p>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+                <div class="stanza-card">
+                    <i class="fas fa-moon"></i>
+                    <h3>Whispers of the Heart</h3>
+                    <p>Delving into the intricate tapestry of emotion, from the quiet ache of solitude to the vibrant joy of connection.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta" id="get-involved">
+    <section class="cta" id="whispers">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>Share Your Whisper</h2>
+            <p>Every soul holds a verse. We invite you to share your own poetic echoes with our community of kindred spirits.</p>
+            <a href="#" class="btn">Submit Your Poem</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <h3>Echoes of the Quill</h3>
+                    <p>A quiet corner of the internet dedicated to the art of poetry and the celebration of the written word.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Anthology</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">The Classics</a></li>
+                        <li><a href="#">Contemporary Voices</a></li>
+                        <li><a href="#">Nature's Verse</a></li>
+                        <li><a href="#">Sonnets of Solitude</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Community</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Poets</a></li>
+                        <li><a href="#">Writing Prompts</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Stay Inspired</h3>
+                    <p>Receive a weekly verse and poetic inspiration directly in your inbox.</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Our Programs</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 Echoes of the Quill. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -674,41 +558,23 @@
             document.querySelector('nav ul').classList.toggle('active');
         });
 
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                
-                const inc = target / speed;
-                
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-
-        // Initialize counters when page loads
-        window.addEventListener('load', animateCounters);
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+                if(!targetId || targetId === '#') return;
                 
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
+                    // Calculate offset for sticky header
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
                     
